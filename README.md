@@ -50,6 +50,19 @@ This script will generate a conversation between 2 characters, using a prompt fo
 python run_csm.py
 ```
 
+### Interactive Chatbot
+
+The `csm_chatbot.py` script pairs CSM with a small language model to create a
+simple text-and-audio chatbot. You will need access to the Llama 3.2-1B model
+from Hugging Face. After logging in with `huggingface-cli`, run:
+
+```bash
+python csm_chatbot.py
+```
+
+Each response will be synthesized to `bot_response.wav` so you can listen to the
+conversation.
+
 ## Usage
 
 If you want to write your own applications with CSM, the following examples show basic usage.
