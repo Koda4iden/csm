@@ -167,3 +167,26 @@ By using this model, you agree to comply with all applicable laws and ethical gu
 
 ## Authors
 Johan Schalkwyk, Ankit Kumar, Dan Lyth, Sefik Emre Eskimez, Zack Hodari, Cinjon Resnick, Ramon Sanabria, Raven Jiang, and the Sesame team.
+
+## Luscious Constraint simulation (C++)
+
+This repository now includes a standalone C++ simulation (`luscious_constraint.cpp`) that models:
+
+- a chaotic high-frequency frother input,
+- a high-viscosity cream medium,
+- configurable container boundaries,
+- and an emergent foam layer built from repeated disturbance.
+
+### Build
+
+```bash
+g++ -std=c++17 -O2 luscious_constraint.cpp -o luscious_constraint
+```
+
+### Run
+
+```bash
+./luscious_constraint --steps 900 --frother-intensity 3.4 --frother-frequency 0.6 --viscosity 0.42 --boundary reflective --csv foam_metrics.csv
+```
+
+The program prints periodic ASCII snapshots of energy+foam structure and writes metrics (`mean_energy`, `max_energy`, `foam_mass`, `foam_clusters`) to CSV for plotting or inspection.
